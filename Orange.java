@@ -62,6 +62,22 @@ public class Orange {
 
     public static void main (String[] args){
         //Ecrire ici vos tests
-	System.out.println("premier test Orange");
+        Orange o1 = new Orange();
+        Orange o2 = new Orange(224,"Guinee");
+        Orange o3 = new Orange();
+        o3.setOrigine("usa");
+        o3.setPrix(-224.0);
+	     System.out.println("cet"+" "+o1.toString());
+         System.out.println("cet"+" "+ o2.toString() );
+         o1.setOrigine("Guinee");
+         if(o1.equals(o2))
+        {System.out.println(" les deux oranges sont de même origine..");}else{
+            System.out.println("Elle sont d'orgine differents");
+        }
+
+        if(o3.getPrix()<=0.0){
+            o1.isSeedless();
+            System.out.println("cet"+o3.toString()+" "+ "n'as pas de pépins");
+        }else{System.out.println("cet"+o3.toString()+" "+"a du pépins");}
    }
 }
